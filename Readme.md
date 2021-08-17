@@ -59,7 +59,7 @@ resource "bigip_as3" "for_each_all_tenants" {
 ---
 **NOTE**
 
-The bigip_as3 resources refernce two AS3 declarations in the **ordppdtest** directoy.
+The bigip_as3 resources reference two AS3 declarations in the **ordppdtest** directoy.
 
 ---
 
