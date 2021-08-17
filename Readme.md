@@ -65,7 +65,7 @@ The bigip_as3 resources refernce two AS3 declarations in the **ordppdtest** dire
 
 **random-decl-single-tenant1.json**
 
-````
+```
 {
   "class": "AS3",
   "action": "deploy",
