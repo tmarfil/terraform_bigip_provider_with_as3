@@ -27,6 +27,6 @@ resource "bigip_as3" "tenant_02" {
 # Will not force updates during repeated "terraform apply" operations.
 
 resource "bigip_as3" "for_each_all_tenants" {
-    for_each = fileset(path.module, "ordppdtest/random-decl-single-tenant*.json")
-    as3_json = "${file("${each.key}")}"
+  for_each = fileset(path.module, "ordppdtest/random-decl-single-tenant*.json")
+  as3_json = file("${each.key}")
 }

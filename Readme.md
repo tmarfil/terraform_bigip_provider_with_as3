@@ -7,11 +7,11 @@
 
 ## Steps
 
-1. Clone the rep and cd into the working directory.
+1. Clone this repo and cd into the working directory.
 
 ```
-git clone https://github.com/tmarfil/terraform_bigip_provider_with_as3_example.git
-cd terraform_bigip_provider_with_as3_example
+git clone https://github.com/tmarfil/terraform_bigip_provider_with_as3.git
+cd terraform_bigip_provider_with_as3
 ls *.tf
 ```
 
@@ -23,7 +23,13 @@ bigip_username = "admin"
 bigip_password = ""
 ```
 
-3. Chose one of the two examples in **applications.tf** .
+3. Terraform apply
+
+```
+terraform init
+terraform plan
+terraform apply
+
 
 ## Example 1
 
