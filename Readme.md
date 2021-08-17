@@ -44,7 +44,7 @@ resource "bigip_as3" "tenant_01" {
 resource "bigip_as3" "tenant_02" {
   as3_json = file("ordppdtest/random-decl-single-tenant2.json")
   # tenant_filter will ignore Tenants that are not a match.
-  tenant_filter = "Tenant_0"
+  tenant_filter = "Tenant_02"
 }
 ```
 
