@@ -1,0 +1,71 @@
+{
+  "class": "AS3",
+  "action": "deploy",
+  "persist": true,
+  "declaration": {
+    "class": "ADC",
+    "schemaVersion": "3.29.0",
+    "id": "random-decl1",
+    "remark": "random-decl1",
+    "Tenant_02": {
+      "class": "Tenant",
+      "random-decl1-app": {
+        "class": "Application",
+        "random-decl1_80_vs": {
+          "class": "Service_HTTP",
+          "virtualAddresses": ["1.1.12.244"],
+          "profileMultiplex": {
+            "bigip": "/Common/oneconnect"
+          },
+          "persistenceMethods": [
+            {
+              "bigip": "/Common/cookie"
+            }
+          ],
+          "virtualPort": 80,
+          "pool": "random-decl1_8080_pool",
+          "profileTCP": {
+            "bigip": "/Common/tcp"
+          },
+          "snat": "auto"
+        },
+        "random-decl1_8080_pool": {
+          "class": "Pool",
+          "monitors": ["http"],
+          "members": [
+            {
+              "servicePort": 8080,
+              "serverAddresses": ["2.2.12.243", "3.3.12.243"]
+            }
+          ]
+        }
+      },
+      "random-decl2-app": {
+        "class": "Application",
+        "random-decl2_80_vs": {
+          "class": "Service_HTTP",
+          "virtualAddresses": ["1.1.11.253"],
+          "profileMultiplex": {
+            "bigip": "/Common/oneconnect"
+          },
+          "virtualPort": 80,
+          "pool": "random-decl2_8080_pool",
+          "profileTCP": {
+            "bigip": "/Common/tcp"
+          },
+          "snat": "auto"
+        },
+        "random-decl2_8080_pool": {
+          "class": "Pool",
+          "monitors": ["http"],
+          "members": [
+            {
+              "servicePort": 8080,
+              "serverAddresses": ["2.2.11.251", "3.3.11.251"]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
