@@ -5,12 +5,14 @@
   "declaration": {
     "class": "ADC",
     "schemaVersion": "3.29.0",
-    "id": "random-decl1",
-    "remark": "random-decl1",
+    "id": "same_for_all_as3_declarations",
+    "remark": "same_for_all_as3_declarations",
     "Tenant_02": {
       "class": "Tenant",
       "random-decl1-app": {
         "class": "Application",
+        "label": "random-decl1-tenant02-application",
+        "remark": "remark for decl1-tenant02-application",
         "random-decl1_80_vs": {
           "class": "Service_HTTP",
           "virtualAddresses": ["1.1.12.244"],
@@ -42,6 +44,8 @@
       },
       "random-decl2-app": {
         "class": "Application",
+        "label": "random-decl2-tenant02-application",
+        "remark": "remark for decl2-tenant02-application",
         "random-decl2_80_vs": {
           "class": "Service_HTTP",
           "virtualAddresses": ["1.1.11.253"],
