@@ -4,6 +4,8 @@
 
 * One AS3 declaration per _Tenant_
 * A single AS3 declaration can define many _Applications_
+* Keep the AS3 class “id” and “remark” the same across all AS3 declarations.
+* Use the Application class “label” and “remark” properties for comments / descriptions.
 
 ## Steps
 
@@ -73,12 +75,14 @@ The bigip_as3 resources reference two AS3 declarations in the **ordppdtest** dir
   "declaration": {
     "class": "ADC",
     "schemaVersion": "3.29.0",
-    "id": "random-decl1",
-    "remark": "random-decl1",
+    "id": "same_for_all_as3_declarations",
+    "remark": "same_for_all_as3_declarations",
     "Tenant_01": {
       "class": "Tenant",
       "random-decl1-app": {
         "class": "Application",
+        "label": "random-decl1-tenant01-application",
+        "remark": "remark for decl1-tenant01-application",
         "random-decl1_80_vs": {
           "class": "Service_HTTP",
           "virtualAddresses": ["1.1.12.44"],
@@ -110,6 +114,8 @@ The bigip_as3 resources reference two AS3 declarations in the **ordppdtest** dir
       },
       "random-decl2-app": {
         "class": "Application",
+        "label": "random-decl2-tenant01-application",
+        "remark": "remark for decl2-tenant01-application",
         "random-decl2_80_vs": {
           "class": "Service_HTTP",
           "virtualAddresses": ["1.1.11.53"],
@@ -150,12 +156,14 @@ The bigip_as3 resources reference two AS3 declarations in the **ordppdtest** dir
   "declaration": {
     "class": "ADC",
     "schemaVersion": "3.29.0",
-    "id": "random-decl1",
-    "remark": "random-decl1",
+    "id": "same_for_all_as3_declarations",
+    "remark": "same_for_all_as3_declarations",
     "Tenant_02": {
       "class": "Tenant",
       "random-decl1-app": {
         "class": "Application",
+        "label": "random-decl1-tenant02-application",
+        "remark": "remark for decl1-tenant02-application",
         "random-decl1_80_vs": {
           "class": "Service_HTTP",
           "virtualAddresses": ["1.1.12.244"],
@@ -187,6 +195,8 @@ The bigip_as3 resources reference two AS3 declarations in the **ordppdtest** dir
       },
       "random-decl2-app": {
         "class": "Application",
+        "label": "random-decl2-tenant02-application",
+        "remark": "remark for decl2-tenant02-application",
         "random-decl2_80_vs": {
           "class": "Service_HTTP",
           "virtualAddresses": ["1.1.11.253"],
