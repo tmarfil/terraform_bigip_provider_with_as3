@@ -29,7 +29,7 @@ bigip_password = ""
 terraform init
 terraform plan
 terraform apply
-
+```
 
 ## Example 1
 
@@ -44,7 +44,7 @@ resource "bigip_as3" "tenant_01" {
 resource "bigip_as3" "tenant_02" {
   as3_json = file("ordppdtest/random-decl-single-tenant2.json")
   # tenant_filter will ignore Tenants that are not a match.
-  tenant_filter = "Tenant_0"
+  tenant_filter = "Tenant_02"
 }
 ```
 
@@ -59,13 +59,13 @@ resource "bigip_as3" "for_each_all_tenants" {
 ---
 **NOTE**
 
-The bigip_as3 resources refernce two AS3 declarations in the **ordppdtest** directoy.
+The bigip_as3 resources reference two AS3 declarations in the **ordppdtest** directoy.
 
 ---
 
 **random-decl-single-tenant1.json**
 
-````
+```
 {
   "class": "AS3",
   "action": "deploy",
