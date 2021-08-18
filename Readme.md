@@ -4,7 +4,7 @@
 
 * One AS3 declaration per _Tenant_
 * A single AS3 declaration can define many _Applications_
-* Keep the AS3 class “id” and “remark” properties the same across all AS3 declarations
+* Keep the ADC class “id” and “remark” properties the same across all AS3 declarations
 * Use the Application class “label” and “remark” properties for comments / descriptions
 
 ## Steps
